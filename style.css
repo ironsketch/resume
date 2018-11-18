@@ -1,0 +1,16 @@
+body{
+    background-color: #fff;
+    font: #000;
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    margin: 0px;
+    padding: 0px;
+}
+#scrolling{
+    background-color: #ff0000;
+}
+#nav{
+    background-color: #00ff00;
+}
