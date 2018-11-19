@@ -6,6 +6,7 @@ $(window).scroll(function() {
     var overview = $(window).height() - overViewRect.height - 500;
     var goals = $(window).height() - goalsRect.height - 500;
     var history = $(window).height() - historyRect.height - 500;
+    console.log("wS = " + wS + "; history = " + history + "; overview = " + overview);
     if (wS > history){
         off("overviewLink");
         off("goalsLink");
