@@ -1,12 +1,13 @@
 $(window).scroll(function() {
     var wS = $(this).scrollTop();
-    overViewRect = document.getElementById("overview").getBoundingClientRect();
-    goalsRect = document.getElementById("goals").getBoundingClientRect();
-    historyRect = document.getElementById("history").getBoundingClientRect();
-    var overview = $(window).height() - overViewRect.offsetTop - 500;
-    var goals = $(window).height() - goalsRect.offsetTop - 500;
-    var history = $(window).height() - historyRect.offsetTop - 500;
-    console.log("wS = " + wS + "; history = " + history + "; overview = " + overview);
+    var overviewRect = document.getElementById("overview");
+    var goalsRect = document.getElementById("goals");
+    var historyRect = document.getElementById("history");
+
+    var overview = $(window).height() - overviewRect.offsetTop;
+    var goals = $(window).height() - goalsRect.offsetTop;
+    var history = $(window).height() - historyRect.offsetTop;
+    console.log("window = " + $(window).height() + " ov = " + overview + " g = " + goals + " h = " + history);
     if (wS > history){
         off("overviewLink");
         off("goalsLink");
