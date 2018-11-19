@@ -1,22 +1,23 @@
 $(window).scroll(function() {
-    var wS = $(this).scrollTop();
+    var wS = $(window).scrollTop() / ($(document).height() - window.innerHeight);
     var overviewRect = document.getElementById("overview");
     var goalsRect = document.getElementById("goals");
     var historyRect = document.getElementById("history");
 
-    var overview = $(window).height() - overviewRect.offsetTop;
-    var goals = $(window).height() - goalsRect.offsetTop;
-    var history = $(window).height() - historyRect.offsetTop;
-    console.log("Scroll = " + wS + " window = " + $(window).height() + " ov = " + overview + " g = " + goals + " h = " + history);
-    if (wS > historyRect.offsetTop){
+    var overview = overviewRect.offsetTop / $(window).height();
+    var goals = goalsRect.offsetTop / $(window).height();
+    var history = historyRect.offsetTop / $(window).height();
+
+    console.log("wS = " + wS + " scrll = " + window.pageYOffset + " history = " + history + " docht = " + $(document).height() + " winInnerht = " + ($(document).height() - window.innerHeight));
+    if (wS > history){
         off("overviewLink");
         off("goalsLink");
         botOn();
-    } else if (wS > goalsRect.offsetTop){
+    } else if (wS > goals){
         off("overviewLink");
         on("goalsLink");
         off("historyLink");
-    } else if (wS > overviewRect.offsetTop){
+    } else if (wS > overview){
         topOn();
         off("goalsLink");
         off("historyLink");
