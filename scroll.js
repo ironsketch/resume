@@ -7,7 +7,7 @@ $(window).scroll(function() {
     var overview = $(window).height() - overviewRect.offsetTop;
     var goals = $(window).height() - goalsRect.offsetTop;
     var history = $(window).height() - historyRect.offsetTop;
-    console.log("window = " + $(window).height() + " ov = " + overview + " g = " + goals + " h = " + history);
+    console.log("Scroll = " + wS + " window = " + $(window).height() + " ov = " + overview + " g = " + goals + " h = " + history);
     if (wS > historyRect.offsetTop){
         off("overviewLink");
         off("goalsLink");
