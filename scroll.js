@@ -8,15 +8,15 @@ $(window).scroll(function() {
     var goals = $(window).height() - goalsRect.offsetTop;
     var history = $(window).height() - historyRect.offsetTop;
     console.log("window = " + $(window).height() + " ov = " + overview + " g = " + goals + " h = " + history);
-    if (wS > history){
+    if (wS > historyRect.offsetTop){
         off("overviewLink");
         off("goalsLink");
         botOn();
-    } else if (wS > goals){
+    } else if (wS > goalsRect.offsetTop){
         off("overviewLink");
         on("goalsLink");
         off("historyLink");
-    } else if (wS > overview){
+    } else if (wS > overviewRect.offsetTop){
         topOn();
         off("goalsLink");
         off("historyLink");
