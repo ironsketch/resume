@@ -3,9 +3,9 @@ $(window).scroll(function() {
     overViewRect = document.getElementById("overview").getBoundingClientRect();
     goalsRect = document.getElementById("goals").getBoundingClientRect();
     historyRect = document.getElementById("history").getBoundingClientRect();
-    var overview = $(window).height() - overViewRect.height - 500;
-    var goals = $(window).height() - goalsRect.height - 500;
-    var history = $(window).height() - historyRect.height - 500;
+    var overview = $(window).height() - overViewRect.offsetTop - 500;
+    var goals = $(window).height() - goalsRect.offsetTop - 500;
+    var history = $(window).height() - historyRect.offsetTop - 500;
     console.log("wS = " + wS + "; history = " + history + "; overview = " + overview);
     if (wS > history){
         off("overviewLink");
