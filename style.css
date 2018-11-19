@@ -1,16 +1,104 @@
 body{
-    background-color: #fff;
-    font: #000;
+    background-color: #e4e4e4;
+    color: #000;
     margin: 0px;
     padding: 0px;
+}
+a:link, a:visited{
+    color: #000;
+    text-decoration: none;
+}
+a:hover, a:active{
+    color: #4ab274;
+    text-decoration: none;
+}
+h1{
+    color: #4ab274;
+    text-shadow: 0px 0px 10px #ffffff;
 }
 #container{
     margin: 0px;
     padding: 0px;
 }
 #scrolling{
-    background-color: #ff0000;
+}
+#top{
+    padding-top:20px;
+    font-size: 24px;
+    padding-right: 200px;
 }
 #nav{
-    background-color: #00ff00;
+    position: fixed;
+    color: #fff;
+    right: 20px;
+    width: 100px;
+    background-color: #282828;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+    justify-content: center;
+}
+a.navT:link, a:visited{
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+}
+a.navT:hover, a:active{
+    color: #000;
+    background-color: #4ab274;
+    text-decoration: none;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+    border-radius: 10px 10px 0px 0px;
+}
+
+a.navL:link{
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+}
+a.navL:hover, a:active{
+    color: #000;
+    background-color: #4ab274;
+    text-decoration: none;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+}
+
+a.navB:link{
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+}
+a.navB:hover, a:active{
+    color: #000;
+    background-color: #4ab274;
+    text-decoration: none;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+    border-radius: 0px 0px 10px 10px;
 }

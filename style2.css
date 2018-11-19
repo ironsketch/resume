@@ -1,0 +1,27 @@
+body{
+    background-color: #fff;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    margin: 0px;
+    padding: 0px;
+}
+#scrolling{
+    background-color: #fff;
+}
+#nav{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 100px;
+    background-color: #62d183;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+

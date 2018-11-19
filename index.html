@@ -1,13 +1,30 @@
 <html>
     <head><title>Michelle Bergin | Programmer | Artist | Composer</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function navLoc(){
+            var w = window.innerWidth;
+            var height = Math.round(w/8);
+            document.getElementById("nav").style.top = height.toString() + "px";
+        }   
+    </script>
     </head>
+    <body onload="navLoc()" onresize="navLoc()">
     <div id="container">
         <div id="scrolling">
-            All Resume Content
+            <div id="top">
+            <img src="img/me.png" style="margin-left:20px; margin-right:20px" align="left">
+            <h1>Objective</h1>
+            To help with the advancement of AI inturn to help those with neurodivergencies <font size="3"><a href="#1">[1]</a></font>.
+            My personal goal is to replicate human emotions using deep/machine learning. Not to just help with AI, but to learn through our mistakes, what it is to be human. We could then use this information to help those with neurodivergencies. 
+            </div>
         </div>
         <div id="nav">
-            My future navigation
+            <a href="about.html" class="navT">Top</a>
+            <br /><a href="about.html" class="navL">Middle</a>
+            <br /><a href="about.html" class="navB">Bottom</a>
         </div>
+        <a name="1">[1]</a> Neurodivergent, sometimes abbreviated as ND, means having a brain that functions in ways that diverge significantly from the dominant societal standards of “normal.”
     </div>
+    </body>
 </html>
