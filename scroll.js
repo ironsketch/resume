@@ -15,69 +15,74 @@ $(window).scroll(function() {
     var awards = awardsRect.offsetTop / $(window).height();
 
     if (wS > awards){
-        off("overviewLink");
-        off("goalsLink");
-        off("skillsLink");
-        off("historyLink");
-        off("educationLink");
+        off("overviewLink", "h1overview");
+        off("goalsLink", "h1goals");
+        off("skillsLink", "h1skills");
+        off("historyLink", "h1history");
+        off("educationLink", "h1education");
         botOn();
     } else if (wS > education){
-        off("overviewLink");
-        off("goalsLink");
-        off("skillsLink");
-        off("historyLink");
-        on("educationLink");
-        off("awardsLink");
+        off("overviewLink", "h1overview");
+        off("goalsLink", "h1goals");
+        off("skillsLink", "h1skills");
+        off("historyLink", "h1history");
+        on("educationLink", "h1education");
+        off("awardsLink", "h1awards");
     } else if (wS > history){
-        off("overviewLink");
-        off("goalsLink");
-        off("skillsLink");
-        on("historyLink");
-        off("educationLink");
-        off("awardsLink");
+        off("overviewLink", "h1overview");
+        off("goalsLink", "h1goals");
+        off("skillsLink", "h1skills");
+        on("historyLink", "h1history");
+        off("educationLink", "h1education");
+        off("awardsLink", "h1awards");
     } else if (wS > skills){
-        off("overviewLink");
-        off("goalsLink");
-        on("skillsLink");
-        off("historyLink");
-        off("educationLink");
-        off("awardsLink");
+        off("overviewLink", "h1overview");
+        off("goalsLink", "h1goals");
+        on("skillsLink", "h1skills");
+        off("historyLink", "h1history");
+        off("educationLink", "h1education");
+        off("awardsLink", "h1awards");
     } else if (wS > goals){
-        off("overviewLink");
-        on("goalsLink");
-        off("skillsLink");
-        off("historyLink");
-        off("educationLink");
-        off("awardsLink");
+        off("overviewLink", "h1overview");
+        on("goalsLink", "h1goals");
+        off("skillsLink", "h1skills");
+        off("historyLink", "h1history");
+        off("educationLink", "h1education");
+        off("awardsLink", "h1awards");
     } else if (wS > overview){
         topOn();
-        off("goalsLink");
-        off("skillsLink");
-        off("historyLink");
-        off("educationLink");
-        off("awardsLink");
+        off("goalsLink", "h1goals");
+        off("skillsLink", "h1skills");
+        off("historyLink", "h1history");
+        off("educationLink", "h1education");
+        off("awardsLink", "h1awards");
     } else if (wS > 0){
-        off("overviewLink");
-        off("goalsLink");
-        off("skillsLink");
-        off("historyLink");
-        off("educationLink");
-        off("awardsLink");
+        off("overviewLink", "h1overview");
+        off("goalsLink", "h1goals");
+        off("skillsLink", "h1skills");
+        off("historyLink", "h1history");
+        off("educationLink", "h1education");
+        off("awardsLink", "h1awards");
     }
 });
-function off(name){
+function off(name, name2){
     document.getElementById(name).style.backgroundColor = "";
     document.getElementById(name).style.color = "#ffffff";
+    if (document.getElementById(name2).classList.contains("tracking-in-expand")){
+        document.getElementById(name2).classList.remove("tracking-in-expand");
+    }
 }
-function on(name){
+function on(name, name2){
     document.getElementById(name).style.backgroundColor = "#4ab274";
     document.getElementById(name).style.color = "#000000";
+    document.getElementById(name2).classList.add("tracking-in-expand");
 }
 function topOn(){
     document.getElementById("overviewLink").style.backgroundColor = "#4ab274";
     document.getElementById("overviewLink").style.color = "#000000";
     document.getElementById("overviewLink").style.borderTopLeftRadius = "10px";
     document.getElementById("overviewLink").style.borderTopRightRadius = "10px";
+    document.getElementById("h1overview").classList.add("tracking-in-expand");
 }
 function botOn(){
     document.getElementById("awardsLink").style.backgroundColor = "#4ab274";
@@ -86,4 +91,5 @@ function botOn(){
     document.getElementById("awardsLink").style.borderTopRightRadius = "0px";
     document.getElementById("awardsLink").style.borderBottomLeftRadius = "10px";
     document.getElementById("awardsLink").style.borderBottomRightRadius = "10px";
+    document.getElementById("h1awards").classList.add("tracking-in-expand");
 }
