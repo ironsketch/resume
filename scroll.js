@@ -56,6 +56,13 @@ $(window).scroll(function() {
         off("historyLink");
         off("educationLink");
         off("awardsLink");
+    } else if (wS > 0){
+        off("overviewLink");
+        off("goalsLink");
+        off("skillsLink");
+        off("historyLink");
+        off("educationLink");
+        off("awardsLink");
     }
 });
 function off(name){
