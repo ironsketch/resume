@@ -2,25 +2,60 @@ $(window).scroll(function() {
     var wS = $(window).scrollTop() / ($(document).height() - window.innerHeight);
     var overviewRect = document.getElementById("overview");
     var goalsRect = document.getElementById("goals");
+    var skillsRect = document.getElementById("skills");
     var historyRect = document.getElementById("history");
+    var eduRect = document.getElementById("education");
+    var awardsRect = document.getElementById("awards");
 
     var overview = overviewRect.offsetTop / $(window).height();
     var goals = goalsRect.offsetTop / $(window).height();
+    var skills = skillsRect.offsetTop / $(window).height();
     var history = historyRect.offsetTop / $(window).height();
+    var education = eduRect.offsetTop / $(window).height();
+    var awards = awardsRect.offsetTop / $(window).height();
 
-    console.log("wS = " + wS + " scrll = " + window.pageYOffset + " history = " + history + " docht = " + $(document).height() + " winInnerht = " + ($(document).height() - window.innerHeight));
-    if (wS > history){
+    if (wS > awards){
         off("overviewLink");
         off("goalsLink");
+        off("skillsLink");
+        off("historyLink");
+        off("educationLink");
         botOn();
+    } else if (wS > education){
+        off("overviewLink");
+        off("goalsLink");
+        off("skillsLink");
+        off("historyLink");
+        on("educationLink");
+        off("awardsLink");
+    } else if (wS > history){
+        off("overviewLink");
+        off("goalsLink");
+        off("skillsLink");
+        on("historyLink");
+        off("educationLink");
+        off("awardsLink");
+    } else if (wS > skills){
+        off("overviewLink");
+        off("goalsLink");
+        on("skillsLink");
+        off("historyLink");
+        off("educationLink");
+        off("awardsLink");
     } else if (wS > goals){
         off("overviewLink");
         on("goalsLink");
+        off("skillsLink");
         off("historyLink");
+        off("educationLink");
+        off("awardsLink");
     } else if (wS > overview){
         topOn();
         off("goalsLink");
+        off("skillsLink");
         off("historyLink");
+        off("educationLink");
+        off("awardsLink");
     }
 });
 function off(name){
@@ -38,10 +73,10 @@ function topOn(){
     document.getElementById("overviewLink").style.borderTopRightRadius = "10px";
 }
 function botOn(){
-    document.getElementById("historyLink").style.backgroundColor = "#4ab274";
-    document.getElementById("historyLink").style.color = "#000000";
-    document.getElementById("historyLink").style.borderTopLeftRadius = "0px";
-    document.getElementById("historyLink").style.borderTopRightRadius = "0px";
-    document.getElementById("historyLink").style.borderBottomLeftRadius = "10px";
-    document.getElementById("historyLink").style.borderBottomRightRadius = "10px";
+    document.getElementById("awardsLink").style.backgroundColor = "#4ab274";
+    document.getElementById("awardsLink").style.color = "#000000";
+    document.getElementById("awardsLink").style.borderTopLeftRadius = "0px";
+    document.getElementById("awardsLink").style.borderTopRightRadius = "0px";
+    document.getElementById("awardsLink").style.borderBottomLeftRadius = "10px";
+    document.getElementById("awardsLink").style.borderBottomRightRadius = "10px";
 }

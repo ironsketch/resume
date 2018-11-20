@@ -17,6 +17,7 @@ h1{
     text-shadow: 0px 0px 10px #ffffff;
 }
 #container{
+    
     margin: 0px;
     padding: 0px;
 }
@@ -33,13 +34,13 @@ h1{
 #legend{
     bottom: 0px;
     left: 0px;
-    margin-bottom: 0px;
-    padding: 10px 10px 10px 10px;
     width: 100%;
+    padding-top: 20px;
 }
 #nav{
     position: fixed;
     color: #fff;
+    top: 10px;
     right: 50px;
     width: 100px;
     background-color: #282828;
@@ -48,7 +49,6 @@ h1{
     text-align: center;
     border-radius: 10px;
     display: inline-block;
-    justify-content: center;
 }
 a.navT:link, a.navT:visited{
     color: #fff;
