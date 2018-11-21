@@ -1,3 +1,7 @@
+function colors(){
+    var colorArr = ["#c0cad8", "#deeabb", "#c3b1dd", "#35b0cf"];
+    document.body.style.backgroundColor = colorArr[Math.floor(Math.random() * 3)];
+}
 $(window).scroll(function() {
     var wS = $(window).scrollTop() / ($(document).height() - window.innerHeight);
     var overviewRect = document.getElementById("overview");

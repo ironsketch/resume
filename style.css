@@ -3,6 +3,7 @@ body{
     color: #000;
     margin: 0px;
     padding: 0px;
+    transition: background-color 1s ease;
 }
 a.all:link, a.all:visited{
     color: #000;
@@ -13,8 +14,8 @@ a.all:hover, a.all:active{
     text-decoration: none;
 }
 h1{
-    color: #4ab274;
-    text-shadow: 0px 0px 10px #ffffff;
+    color: #fff;
+    text-shadow: 0px 0px 10px #000;
 }
 #container{
     margin: 0px;
