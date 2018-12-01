@@ -3,7 +3,7 @@ body{
     color: #000;
     margin: 0px;
     padding: 0px;
-    transition: background-color 1s ease;
+    transition: background-color 3s ease;
 }
 a.all:link, a.all:visited{
     color: #000;
@@ -38,7 +38,7 @@ h1{
     padding-top: 20px;
 }
 .tracking-in-expand{
-    -webkit-animation:traking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both
+    -webkit-animation:traking-in-expand 2s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand 2s cubic-bezier(.215,.61,.355,1.000) both
 }
 @-webkit-keyframes traking-in-expand{
     0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
